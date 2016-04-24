@@ -4,7 +4,7 @@ use strict;
 
 # Schalter einbauen für Flug / Sitz
 
-(my $critfile, my $datafile, my $switch) = @ARGV;       # put first parameter into switch
+(my $switch, my$critfile, my $datafile) = @ARGV;       # put first parameter into switch
 chomp ($critfile);
 chomp ($datafile);
 chomp ($switch);
@@ -31,7 +31,7 @@ if ($switch eq "-h") {   # show help text
 
 sub BirdHelp{
 
-    print "\ngreifvogel.ps crit-filename data-filename [-[vh]]]\n";
+    print "\ngreifvogel.ps [-[vh]]] crit-filename data-filename\n";
     print "answer 1 for true observation and 0 for not observed\n";
     print "example : 0100 equals to second option observed, 1,3,4 not observed\n";
     print "the program provides a list off all datalines which fullfill the criteria (1)\n\n";
